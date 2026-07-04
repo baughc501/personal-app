@@ -19,6 +19,34 @@ export default function Home() {
         >
           View Listings
         </a>
+        <form
+            onSubmit={async (e) => {
+                e.preventDefault();
+                const email = e.target.email.value;
+
+                await fetch("/api/newsletter", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ email })
+                });
+
+                alert("Thanks for signing up!");
+            }}
+            >
+            <input
+                name="email"
+                type="email"
+                placeholder="Your email"
+                className="border p-2 w-full mb-4 rounded-md"
+            />
+
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                Sign Up
+            </button>
+        </form>
+
       </div>
 
       <Footer />
