@@ -8,6 +8,27 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="flex-1 flex flex-col items-center justify-center text-center px-6 py-20">
+        {/* Headshot */}
+        <img
+          src="/images/closeup.jpg"
+          alt="Chris Baugh"
+          className="w-40 h-40 rounded-full object-cover shadow-lg mb-4"
+        />
+
+        {/* Name + REALTOR® + Brokerage */}
+        <div className="flex flex-col items-center mb-6">
+          <p className="text-xl font-semibold text-gray-800">Chris Baugh, REALTOR®</p>
+          <p className="text-sm text-gray-600 mt-1">Crye‑Leike Realtors®</p>
+
+          {/* Brokerage Logo */}
+          <img
+            src="/images/logo.jpeg"
+            alt="Crye-Leike Realtors"
+            className="h-10 mt-3 opacity-90"
+          />
+        </div>
+
+        {/* Headline */}
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Find Your Next Home
         </h1>
